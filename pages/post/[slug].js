@@ -5,10 +5,10 @@ import matter from "gray-matter"
 import ReactMarkdown from "react-markdown/with-html"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import Layout from "../../components/layouts"
-import dark from 'react-syntax-highlighter/dist/esm/styles/prism/darcula'
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const CodeBlock = ({ language, value }) => {
-    return <SyntaxHighlighter language={language} style={dark}>{value}</SyntaxHighlighter>
+    return <SyntaxHighlighter language={language} style={darcula}>{value}</SyntaxHighlighter>
 };
 
 export default function Post({ content, frontmatter }) {
